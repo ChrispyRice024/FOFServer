@@ -10,6 +10,6 @@ const itemSchema = new mongoose.Schema({
     thumbnail: Buffer
 })
 // {collection: 'FaithOverFear'}
-const Item = mongoose.model('item', itemSchema, 'imageStock')
+const Item = mongoose.model('item', itemSchema)
 
 module.exports = Item
