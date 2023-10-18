@@ -9,7 +9,7 @@ const itemSchema = new mongoose.Schema({
     downloadLink: String,
     thumbnail: Buffer
 })
-// {collection: 'FaithOverFear'}
-const Item = mongoose.model('iTem', itemSchema)
+
+const Item = mongoose.model('item', itemSchema)
 
 module.exports = Item
