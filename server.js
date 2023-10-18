@@ -12,11 +12,16 @@ const options = {
     timeout:50000
 }
 
-mongoose.connect(process.env.MONGO_CONNECT).then(() => {
-    console.log(`the server connected to the database`)
-}).catch((err) => {
-    console.error('could not connect to the database', err)
-})
+async function connectToDB() {
+    try{
+        await mongoose.connect(process.env.MONGO_CONNECT)
+        console.log(`the server connected to the database`)
+    }catch(err){
+        console.error('could not connect to the database', err)
+}
+}
+
+
 
 const routes = require('./routes')
 app.use(routes)
