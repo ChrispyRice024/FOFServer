@@ -2,9 +2,13 @@ const express = require('express')
 const router = express.Router()
 const {Item} = require('../models')
 
+const options = {
+    timeout:50000
+}
+
     router.get('/', async (req, res) => {
         try{
-            const itemData = await Item.find({})
+            const itemData = await Item.find({}).timeout(options).exec()
             console.log('data retreived', itemData)
             res.status(200).json(itemData)
         }catch(err){

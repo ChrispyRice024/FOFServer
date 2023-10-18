@@ -8,6 +8,8 @@ const mongoose = require('mongoose')
 
 const PORT = process.env.PORT
 
+
+
 mongoose.connect(process.env.MONGO_CONNECT).then(() => {
     console.log(`the server connected to the database`)
 }).catch((err) => {
