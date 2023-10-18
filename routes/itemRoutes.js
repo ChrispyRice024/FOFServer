@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
         console.log('data retreived', itemData)
         res.status(200).json(itemData)
     }catch(err){
-        res.status(400).json({msg:'There was a problem getting the data', err})
+        res.status(400).json({msg:'There was a problem getting the data', err: err})
         console.error(err)
     }
 })
