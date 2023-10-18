@@ -2,20 +2,16 @@ const express = require('express')
 const router = express.Router()
 const {Item} = require('../models')
 
-const options = {
-    timeout:50000
-}
-
-    router.get('/', async (req, res) => {
-        try{
-            const itemData = await Item.find({}).timeout(options).exec()
-            console.log('data retreived', itemData)
-            res.status(200).json(itemData)
-        }catch(err){
-            res.status(400).json({msg:'There was a problem getting the data', err: err.stack})
-            console.error(err)
-        }
-    })
+router.get('/', async (req, res) => {
+    try{
+        const itemData = await Item.find({}).maxTime(50000).exec()
+        console.log('data retreived', itemData)
+        res.status(200).json(itemData)
+    }catch(err){
+        res.status(400).json({msg:'There was a problem getting the data', err: err.stack})
+        console.error(err)
+    }
+})
 
 router.post('/', async (req, res) => {
     try{

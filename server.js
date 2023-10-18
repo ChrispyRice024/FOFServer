@@ -8,7 +8,9 @@ const mongoose = require('mongoose')
 
 const PORT = process.env.PORT
 
-
+const options = {
+    timeout:50000
+}
 
 mongoose.connect(process.env.MONGO_CONNECT).then(() => {
     console.log(`the server connected to the database`)
