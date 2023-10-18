@@ -10,6 +10,6 @@ const mongoose = require('mongoose')
         thumbnail: Buffer
     })
 
-    const Item = mongoose.model('item', itemSchema, imageStock)
+    const Item = mongoose.model('item', itemSchema)
 
 module.exports = Item
