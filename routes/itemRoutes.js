@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
         res.status(200).json(itemData)
     }catch(err){
         console.error(err)
-        res.status(400).json({msg:'there was an error', err})
+        res.status(400).json({msg:'there was an error', err: err})
     }
 })
 

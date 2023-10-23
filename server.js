@@ -21,7 +21,7 @@ async function connectToDB() {
 }
 }
 
-
+connectToDB()
 
 const routes = require('./routes')
 app.use(routes)
