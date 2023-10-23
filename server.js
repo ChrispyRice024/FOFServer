@@ -22,12 +22,12 @@ async function connectToDB() {
 }
 
 connectToDB()
-
+app.use(express.urlencoded({extended:false}))
+app.use(express.json())
 const routes = require('./routes')
 app.use(routes)
 
-app.use(express.urlencoded({extended:false}))
-app.use(express.json())
+
 
 app.listen(3001, () => {
     console.log('server is running')
