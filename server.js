@@ -33,6 +33,6 @@ app.use(routes)
 
 
 
-app.listen(3001, () => {
+app.listen(6001, () => {
     console.log('server is running')
 })
