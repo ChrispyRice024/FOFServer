@@ -14,6 +14,15 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/:id', async (req, res) => {
+    try{
+        const itemData = await Item.findById(req.params.id)
+        res.status(200).json(itemData)
+    }catch(err){
+        res.status(400).json({msg:'there was a problem getting the data', err: err.stack})
+    }
+})
+
     router.post('/', async (req, res) => {
         console.log('outside block', req.body)
         try{
@@ -29,9 +38,13 @@ router.get('/', async (req, res) => {
         }
     })
 
-// router.update('/:itemId', async (req, res) => {
-//     try{
-//         const itemData = await Item.updateOne()
-//     }
-// })
+router.put('/:id', async (req, res) => {
+    try{
+        const itemData = await Item.findByIdAndUpdate(req.params.id, req.body, {new: true})
+        console.log(req.body)
+        res.status(200).json(itemData)
+    }catch(err){
+        res.status(400).json({msg: 'there was a problem with the update', err: err})
+    }
+})
 module.exports = router

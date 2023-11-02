@@ -1,5 +1,6 @@
 const dotenv = require('dotenv')
 dotenv.config()
+const cors = require('cors')
 
 const express = require('express')
 const router = express.Router()
@@ -8,10 +9,13 @@ const mongoose = require('mongoose')
 
 const PORT = process.env.PORT
 
+// const allowedOrigins = []
+
+
 const options = {
     timeout:50000
 }
-
+//add a part that only allows connection if a certain token is created
 async function connectToDB() {
     try{
         await mongoose.connect(process.env.MONGO_CONNECT)
