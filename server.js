@@ -2,12 +2,12 @@ const dotenv = require('dotenv')
 dotenv.config()
 const cors = require('cors')
 
+const PORT = process.env.PORT || 6001
+
 const express = require('express')
 const router = express.Router()
 const app = express()
 const mongoose = require('mongoose')
-
-const PORT = process.env.PORT
 
 // const allowedOrigins = []
 
@@ -33,6 +33,6 @@ app.use(routes)
 
 
 
-app.listen(6001, () => {
-    console.log('server is running')
+app.listen(PORT, () => {
+    console.log('server is running on ${PORT}')
 })
