@@ -9,13 +9,25 @@ const router = express.Router()
 const app = express()
 const mongoose = require('mongoose')
 
-// const allowedOrigins = []
-
-
-const options = {
-    timeout:50000
+const corsOptions = {
+    origin: 'https://65691d063dc96526c197c6d8--faithoverfear.netlify.app/',
+    optionSuccessStatus: 200
 }
-//add a part that only allows connection if a certain token is created
+
+app.use((req, res, next) => {
+    console.log(`Request made to: ${req.method} ${req.originalUrl}`);
+    next();
+  });
+  
+  // Your route handler
+  app.get('/item', (req, res) => {
+    // Your existing route logic
+    res.json({ message: 'GET request received successfully' });
+  });
+
+app.options('*', cors(corsOptions))
+app.use(cors(corsOptions))
+
 async function connectToDB() {
     try{
         await mongoose.connect(process.env.MONGO_CONNECT)
