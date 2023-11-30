@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js && cd public && npm start",
+    "start": "concurrently \"node server.js\" \"cd public && npm start\"",
     "build": "cd public npm build"
   },
   "keywords": [],
@@ -17,5 +17,8 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongoose": "^7.6.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
