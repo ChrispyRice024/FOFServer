@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1,
+      "title": "Abstract Artwork 1",
+      "description": "A beautiful abstract artwork with vibrant colors.",
+      "price": 10.99,
+      "downloadLink": "https://example.com/downloads/abstract-artwork-1.zip",
+      "thumbnail": "https://example.com/images/abstract-artwork-1-thumb.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Nature Photography 1",
+      "description": "Stunning nature photography of landscapes and wildlife.",
+      "price": 12.99,
+      "downloadLink": "https://example.com/downloads/nature-photography-1.zip",
+      "thumbnail": "https://example.com/images/nature-photography-1-thumb.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Digital Illustration 1",
+      "description": "A digital illustration depicting a futuristic cityscape.",
+      "price": 8.99,
+      "downloadLink": "https://example.com/downloads/digital-illustration-1.zip",
+      "thumbnail": "https://example.com/images/digital-illustration-1-thumb.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Vector Icons Pack",
+      "description": "A collection of vector icons for web and app design.",
+      "price": 14.99,
+      "downloadLink": "https://example.com/downloads/vector-icons-pack.zip",
+      "thumbnail": "https://example.com/images/vector-icons-pack-thumb.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Watercolor Painting 1",
+        "description": "A beautiful watercolor painting of a serene landscape.",
+        "price": 11.99,
+        "downloadLink": "https://example.com/downloads/watercolor-painting-1.zip",
+        "thumbnail": "https://example.com/images/watercolor-painting-1-thumb.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Modern Architecture Sketch",
+        "description": "A detailed sketch of a modern architectural masterpiece.",
+        "price": 9.99,
+        "downloadLink": "https://example.com/downloads/modern-architecture-sketch.zip",
+        "thumbnail": "https://example.com/images/modern-architecture-sketch-thumb.jpg"
+      },
+      {
+        "id": 7,
+        "title": "Abstract Artwork 2",
+        "description": "Another abstract artwork with unique patterns and colors.",
+        "price": 13.99,
+        "downloadLink": "https://example.com/downloads/abstract-artwork-2.zip",
+        "thumbnail": "https://example.com/images/abstract-artwork-2-thumb.jpg"
+      },
+      {
+        "id": 8,
+        "title": "Wildlife Photography Collection",
+        "description": "A collection of breathtaking wildlife photographs.",
+        "price": 17.99,
+        "downloadLink": "https://example.com/downloads/wildlife-photography-collection.zip",
+        "thumbnail": "https://example.com/images/wildlife-photography-collection-thumb.jpg"
+      },
+      {
+        "id": 9,
+        "title": "Vintage Illustrations Pack",
+        "description": "A pack of vintage-style illustrations for creative projects.",
+        "price": 15.99,
+        "downloadLink": "https://example.com/downloads/vintage-illustrations-pack.zip",
+        "thumbnail": "https://example.com/images/vintage-illustrations-pack-thumb.jpg"
+      },
+      {
+        "id": 10,
+        "title": "Abstract Sculpture",
+        "description": "A 3D abstract sculpture that challenges perception.",
+        "price": 12.49,
+        "downloadLink": "https://example.com/downloads/abstract-sculpture.zip",
+        "thumbnail": "https://example.com/images/abstract-sculpture-thumb.jpg"
+      }
+  ]
