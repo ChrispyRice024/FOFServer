@@ -10,7 +10,7 @@ const app = express()
 const mongoose = require('mongoose')
 
 const corsOptions = {
-    origin: 'https://65692194bb909226d104d6f5--faithoverfear.netlify.app',
+    origin: ['https://65692194bb909226d104d6f5--faithoverfear.netlify.app', 'https://656e601c276f43006d302ec7--dbcompanion.netlify.app'],
     optionSuccessStatus: 200
 }
 
