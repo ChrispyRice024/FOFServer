@@ -20,10 +20,10 @@ app.use((req, res, next) => {
   });
   
   // Your route handler
-  app.get('/item', (req, res) => {
-    // Your existing route logic
-    res.json({ message: 'GET request received successfully' });
-  });
+//   app.get('/item', (req, res) => {
+//     // Your existing route logic
+//     res.json({ message: 'GET request received successfully' });
+//   });
 
 app.options('*', cors(corsOptions))
 app.use(cors(corsOptions))
