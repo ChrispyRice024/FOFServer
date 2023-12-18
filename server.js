@@ -10,20 +10,20 @@ const app = express()
 const mongoose = require('mongoose')
 
 const corsOptions = {
-    origin: ['https://65692194bb909226d104d6f5--faithoverfear.netlify.app', 'https://656e637a31207e030634767c--dbcompanion.netlify.app'],
+    origin: ['https://65692194bb909226d104d6f5--faithoverfear.netlify.app', 'https://657f92ee1ade9148b646e3f1--dbcompanion.netlify.app/'],
     optionSuccessStatus: 200
 }
 
-// app.use((req, res, next) => {
-//     console.log(`Request made to: ${req.method} ${req.originalUrl}`);
-//     next();
-//   });
+app.use((req, res, next) => {
+    console.log(`Request made to: ${req.method} ${req.originalUrl}`);
+    next();
+  });
   
-//   // Your route handler
-//   app.get('/item', (req, res) => {
-//     // Your existing route logic
-//     res.json({ message: 'GET request received successfully' });
-//   });
+  // Your route handler
+  app.get('/item', (req, res) => {
+    // Your existing route logic
+    res.json({ message: 'GET request received successfully' });
+  });
 
 app.options('*', cors(corsOptions))
 app.use(cors(corsOptions))
