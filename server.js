@@ -25,8 +25,8 @@ const mongoose = require('mongoose')
 //     res.json({ message: 'GET request received successfully' });
 //   });
 
-app.options('*', cors(corsOptions))
-app.use(cors(corsOptions))
+// app.options('*', cors(corsOptions))
+// app.use(cors(corsOptions))
 
 async function connectToDB() {
     try{
