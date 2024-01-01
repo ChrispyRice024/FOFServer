@@ -1,6 +1,6 @@
 const dotenv = require('dotenv')
 dotenv.config()
-const cors = require('cors')
+// const cors = require('cors')
 
 const PORT = process.env.PORT || 6001
 
@@ -9,15 +9,15 @@ const router = express.Router()
 const app = express()
 const mongoose = require('mongoose')
 // 'https://65692194bb909226d104d6f5--faithoverfear.netlify.app', https://657f944b70b5414ec080429f--dbcompanion.netlify.app/newentry
-const corsOptions = {
-    origin: ['*'],
-    optionSuccessStatus: 200
-}
+// const corsOptions = {
+//     origin: ['*'],
+//     optionSuccessStatus: 200
+// }
 
-app.use((req, res, next) => {
-    console.log(`Request made to: ${req.method} ${req.originalUrl}`);
-    next();
-  });
+// app.use((req, res, next) => {
+//     console.log(`Request made to: ${req.method} ${req.originalUrl}`);
+//     next();
+//   });
   
   // Your route handler
 //   app.get('/item', (req, res) => {
