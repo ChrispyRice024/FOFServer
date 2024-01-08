@@ -8,25 +8,25 @@ const express = require('express')
 const router = express.Router()
 const app = express()
 const mongoose = require('mongoose')
-// 'https://65692194bb909226d104d6f5--faithoverfear.netlify.app', https://657f944b70b5414ec080429f--dbcompanion.netlify.app/newentry
-// const corsOptions = {
-//     origin: ['*'],
-//     optionSuccessStatus: 200
-// }
 
-// app.use((req, res, next) => {
-//     console.log(`Request made to: ${req.method} ${req.originalUrl}`);
-//     next();
-//   });
+const corsOptions = {
+    origin: [process.env.FOFURL],
+    optionSuccessStatus: 200
+}
+
+app.use((req, res, next) => {
+    console.log(`Request made to: ${req.method} ${req.originalUrl}`);
+    next();
+  });
   
-  // Your route handler
-//   app.get('/item', (req, res) => {
-//     // Your existing route logic
-//     res.json({ message: 'GET request received successfully' });
-//   });
+  Your route handler
+  app.get('/item', (req, res) => {
+    // Your existing route logic
+    res.json({ message: 'GET request received successfully' });
+  });
 
-// app.options('*', cors(corsOptions))
-// app.use(cors(corsOptions))
+app.options('*', cors(corsOptions))
+app.use(cors(corsOptions))
 
 async function connectToDB() {
     try{
