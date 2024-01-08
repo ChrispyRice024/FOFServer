@@ -1,6 +1,6 @@
 const dotenv = require('dotenv')
 dotenv.config()
-// const cors = require('cors')
+const cors = require('cors')
 
 const PORT = process.env.PORT || 6001
 
@@ -19,9 +19,7 @@ app.use((req, res, next) => {
     next();
   });
   
-  Your route handler
   app.get('/item', (req, res) => {
-    // Your existing route logic
     res.json({ message: 'GET request received successfully' });
   });
 
